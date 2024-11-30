@@ -1,0 +1,27 @@
+/* Main container */
+.section6-container {
+    text-align: center; /* Center align the content */
+    padding: 50px;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text color */
+  }
+  
+  /* Section title */
+  .section6-title {
+    font-size: 60px; /* Title size */
+    font-weight: bold;
+    color: #b4860f; /* Title color */
+    margin-bottom: 20px;
+    font-family: "Big Shoulders Display", cursive; /* Cursive font for title */
+    margin-top: 10px;
+  }
+  
+  /* Paragraph styling */
+  .section6-paragraph {
+    font-size: 18px; /* Size of the paragraph text */
+    font-family: "Poppins", sans-serif; /* Sans-serif font for body text */
+    color: #ffffff; /* White text color */
+    max-width: 600px; /* Limit the width of the paragraph */
+    margin: 0 auto; /* Center the paragraph */
+  }
+  

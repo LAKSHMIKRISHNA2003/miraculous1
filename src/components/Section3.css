@@ -1,0 +1,25 @@
+/* Main container */
+.section3-container {
+    text-align: center;
+    padding: 50px;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  /* Section title */
+  .section3-title {
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: "Big Shoulders Display", cursive;
+    color: #b4860f;
+  }
+  
+  /* Map container */
+  .map-container {
+    margin: 0 auto;
+    width: 80%; /* Adjust width as needed */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  

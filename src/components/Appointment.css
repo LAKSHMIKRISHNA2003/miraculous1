@@ -1,0 +1,78 @@
+.appointment-page {
+    font-family: "Poppins", sans-serif;
+    padding: 2rem;
+    background-color: #000000;
+    color: #333;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 60px;
+    margin-bottom: 1.5rem;
+    color: #b4860f;
+    margin-top: 150px;
+    font-family: "Big Shoulders Display";
+  }
+  
+  .calendar-section{
+    margin-left: 475px;
+    margin-top: 50px;
+  }
+  .time-slot-section,
+  .form-section {
+    margin: 1.5rem 0;
+  }
+  
+  .time-slots {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .time-slot {
+    background-color: #fff;
+    border: 2px solid #b4860f;
+    color: #b4860f;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .time-slot:hover,
+  .time-slot.selected {
+    background-color: #b4860f;
+    color: #fff;
+  }
+  
+  .appointment-form input,
+  .appointment-form textarea {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 0.5rem auto;
+    padding: 0.8rem;
+    border: 2px solid #b4860f;
+    border-radius: 5px;
+  }
+  
+  .appointment-form textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .submit-button {
+    background-color: #b4860f;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #995f0f;
+  }
+  

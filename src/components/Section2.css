@@ -1,0 +1,79 @@
+/* Main container */
+.section2-container {
+    text-align: center;
+    padding: 50px;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  /* Section title */
+  .section2-title {
+    font-size: 65px;
+    margin-bottom: 60px;
+    font-weight: bold;
+    font-family: "Big Shoulders Display", cursive;
+    color: #b4860f;
+  }
+  
+  /* Cards container */
+  .section2-card-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  /* Common card styles */
+  .section2-card {
+    width: 250px;
+    height: 350px; /* Increase the card length by setting height */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex; /* Align content */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+  }
+  
+  /* Card specific styles */
+  .white-card {
+    background-color: #ffffff;
+  }
+  .white-card:hover {
+    box-shadow: 0 4px 8px rgb(255, 184, 4);
+  }
+  
+  .gold-card {
+    background-color: #b4860f;
+    color: #ffffff;
+    height: 400px;
+  }
+  .gold-card:hover {
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+  }
+  
+  /* Card title styles */
+  .section2-card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000000;
+    font-family: poppins;
+  }
+  
+  .white-text {
+    color: #ffffff;
+    font-family: poppins;
+  }
+  
+  .white-title {
+    color: #ffffff;
+    font-family: poppins;
+  }
+  
+  /* Card text styles */
+  .section2-card-text {
+    font-size: 14px;
+    color: #000000;
+    font-family: poppins;
+  }
+  
