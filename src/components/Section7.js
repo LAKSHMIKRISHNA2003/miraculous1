@@ -3,7 +3,7 @@ import "./Section7.css"; // CSS file for styling
 
 const Section7 = () => {
   return (
-    <div className="section7-container">
+    <div id="contact"className="section7-container">
       <h2 className="form-title">WRITE TO US</h2>
       <form className="contact-form">
         <div className="form-group">

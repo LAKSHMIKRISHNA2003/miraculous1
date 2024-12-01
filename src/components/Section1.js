@@ -6,14 +6,14 @@ import img1 from '../assets/images/3.png';
 
 const Services = () => {
   const cards = [
-    { title: "CLIPPER SHAVE", price: "20$", time: "30MIN", image:img1, link: "#" },
-    { title: "HAIRCUT", price: "30$", time: "45MIN", image: img1, link: "#" },
-    { title: "BEARD TRIM", price: "15$", time: "20MIN", image:img1, link: "#" },
-    { title: "FACIAL", price: "40$", time: "60MIN", image:img1, link: "#" },
+    { title: "CLIPPER SHAVE", price: "20$", time: "30MIN", image:img1, link: "/appointment" },
+    { title: "HAIRCUT", price: "30$", time: "45MIN", image: img1, link: "/appointment" },
+    { title: "BEARD TRIM", price: "15$", time: "20MIN", image:img1, link: "/appointment" },
+    { title: "FACIAL", price: "40$", time: "60MIN", image:img1, link: "/appointment#" },
   ];
 
   return (
-    <div className="services-section">
+    <div id="services"className="services-section">
       <h2 className="services-title">OUR SERVICES</h2>
       <div className="services-cards">
         {cards.map((card, index) => (

@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #000000; /* Set the background color to black */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add background-color for the entire page */
+body {
+  background-color: #000000; /* Set the background color of the body to black */
+  margin: 0;
 }

@@ -1,78 +1,130 @@
 .appointment-page {
-    font-family: "Poppins", sans-serif;
-    padding: 2rem;
-    background-color: #000000;
-    color: #333;
-    text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 2rem;
+  background-color: #000000; /* Black background for all views */
+  color: #333;
+  text-align: center;
+}
+
+.title {
+  font-size: 60px;
+  margin-bottom: 1.5rem;
+  color: #b4860f;
+  margin-top: 150px;
+  font-family: "Big Shoulders Display";
+}
+
+.calendar-section {
+  margin-left: 475px;
+  margin-top: 50px;
+}
+
+.time-slot-section,
+.form-section {
+  margin: 1.5rem 0;
+}
+
+.time-slots {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.time-slot {
+  background-color: #fff;
+  border: 2px solid #b4860f;
+  color: #b4860f;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.time-slot:hover,
+.time-slot.selected {
+  background-color: #b4860f;
+  color: #fff;
+}
+
+.appointment-form input,
+.appointment-form textarea {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0.5rem auto;
+  padding: 0.8rem;
+  border: 2px solid #b4860f;
+  border-radius: 5px;
+}
+
+.appointment-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.submit-button {
+  background-color: #b4860f;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #995f0f;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .appointment-page {
+      background-color: #000000; /* Ensure black background on mobile */
   }
-  
-  .title {
-    font-size: 60px;
-    margin-bottom: 1.5rem;
-    color: #b4860f;
-    margin-top: 150px;
-    font-family: "Big Shoulders Display";
+
+  .calendar-section {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
   }
-  
-  .calendar-section{
-    margin-left: 475px;
-    margin-top: 50px;
-  }
+
   .time-slot-section,
   .form-section {
-    margin: 1.5rem 0;
+      margin: 1rem 0;
+      text-align: center;
   }
-  
+
   .time-slots {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
   }
-  
-  .time-slot {
-    background-color: #fff;
-    border: 2px solid #b4860f;
-    color: #b4860f;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+
+  .appointment-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
-  
-  .time-slot:hover,
-  .time-slot.selected {
-    background-color: #b4860f;
-    color: #fff;
-  }
-  
+
   .appointment-form input,
   .appointment-form textarea {
-    display: block;
-    width: 100%;
-    max-width: 400px;
-    margin: 0.5rem auto;
-    padding: 0.8rem;
-    border: 2px solid #b4860f;
-    border-radius: 5px;
+      width: 90%;
+      max-width: 100%;
+      margin: 1rem auto;
   }
-  
-  .appointment-form textarea {
-    resize: none;
-    height: 100px;
-  }
-  
+
   .submit-button {
-    background-color: #b4860f;
-    color: white;
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+      width: 80%;
+      padding: 0.8rem 1.5rem;
+      margin: 1rem auto;
   }
-  
-  .submit-button:hover {
-    background-color: #995f0f;
+
+  .title {
+      font-size: 36px;
+      margin-top: 120px;
   }
-  
+}

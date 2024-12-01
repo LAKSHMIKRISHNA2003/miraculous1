@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link for navigation
+import { Link } from "react-router-dom"; // Import Link for routing
 import "./Navbar.css";
 import logo from "../assets/images/2.png";
 
@@ -31,13 +31,15 @@ function Navbar() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#services">Services</a> {/* Example: Anchored section */}
+          {/* Smooth scrolling to Services (Section2.js) */}
+          <a href="#services">Services</a>
         </li>
         <li>
-          <a href="#contact">Contact Us</a> {/* Example: Anchored section */}
+          {/* Smooth scrolling to Contact Us (Section7.js) */}
+          <a href="#contact">Contact Us</a>
         </li>
         <li>
-          <a href="#admin">Admin</a> {/* Example: Anchored section */}
+          <Link to="/admin">Admin</Link>
         </li>
         <li>
           <Link to="/appointment" className="appointment-btn">

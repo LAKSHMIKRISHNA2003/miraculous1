@@ -11,32 +11,35 @@ import Section6 from "./components/Section6";
 import Section7 from "./components/Section7";
 import Footer from "./components/Footer";
 import Appointment from "./components/Appointment"; // Import your Appointments page
+import Admin from "./components/Admin"; // Import Admin page if it exists
 
 const App = () => {
   return (
     <Router>
       <Navbar />
       <Routes>
-        {/* Main Page */}
         <Route
           path="/"
           element={
             <>
               <HeroSection />
               <Services />
-              <Section2 />
+              <Section2 id="services" /> {/* Added ID for smooth scrolling */}
               <Section3 />
               <Section4 />
               <Section5 />
               <Section6 />
-              <Section7 />
+              <Section7 id="contact" /> {/* Added ID for smooth scrolling */}
               <Footer />
             </>
           }
         />
-        
+
         {/* Appointments Page */}
         <Route path="/appointment" element={<Appointment />} />
+
+        {/* Admin Page */}
+        <Route path="/admin" element={<Admin />} /> {/* Admin route */}
       </Routes>
     </Router>
   );

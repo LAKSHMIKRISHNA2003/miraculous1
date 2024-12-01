@@ -12,16 +12,15 @@ import image2 from "../assets/images/02.png";
 import image3 from "../assets/images/03.png";
 import image4 from "../assets/images/04.png";
 import image5 from "../assets/images/05.png";
-import image6 from "../assets/images/1.png";
 
 const Section5 = () => {
-  const images = [image1, image2, image3, image4, image5, image6];
+  const images = [image1, image2, image3, image4, image5];
 
   return (
     <div className="section5-container">
       <h2 className="section5-title">IMAGE CAROUSEL</h2>
       <Swiper
-        slidesPerView={4}
+        slidesPerView={1} // Default to 1 image on mobile devices
         spaceBetween={10}
         navigation={true}
         autoplay={{
@@ -30,6 +29,14 @@ const Section5 = () => {
         }}
         scrollbar={{ draggable: true }} // Enable draggable scrollbar
         className="section5-carousel"
+        breakpoints={{
+          1024: {
+            slidesPerView: 4, // For screens larger than 1024px, show 4 images
+          },
+          768: {
+            slidesPerView: 1, // For mobile devices, show only 1 image at a time
+          },
+        }}
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
