@@ -8,13 +8,14 @@ const Section3 = () => {
       <div className="map-container">
         <iframe
           title="Google Maps Preview"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193571.43877290032!2d-74.11808650000001!3d40.7058316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c254cb66b9cb17%3A0x26b82bcd6c8a64e!2sGoogle!5e0!3m2!1sen!2sus!4v1579631872598!5m2!1sen!2sus"
+          
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3364.0294649843327!2d-94.8051024!3d32.52536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x863639eeaa68d323%3A0x40d01d750f0551d7!2sMiraculous%20MVP%20Kutz%20%26%20Salon!5e0!3m2!1sen!2sin!4v1733207308415!5m2!1sen!2sin" 
           width="100%"
           height="400"
           allowFullScreen=""
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+          referrerPolicy="no-referrer-when-downgrade">
+          </iframe>
       </div>
     </div>
   );

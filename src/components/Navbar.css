@@ -4,13 +4,19 @@
   justify-content: space-between; /* Distribute space between logo and hamburger */
   align-items: center;
   padding: 15px 20px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background-color: transparent; /* Transparent background */
-  z-index: 10;
-  margin-top: 5px;
+  z-index: 1000;
+  transition: background-color 0.3s ease; /* Smooth background transition */
+
+}
+
+/* Navbar with scrolled background */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9); /* Black background after scrolling */
 }
 
 /* Logo Container */
@@ -115,7 +121,7 @@
       display: none; /* Hide the links on mobile by default */
       flex-direction: column;
       gap: 10px;
-      background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+      background-color: rgba(0, 0, 0, 1); /* Dark overlay */
       position: absolute;
       top: 60px;
       right: 0;

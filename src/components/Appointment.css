@@ -15,7 +15,7 @@
 }
 
 .calendar-section {
-  margin-left: 475px;
+  margin-left: 475px; /* Centered alignment for desktop */
   margin-top: 50px;
 }
 
@@ -80,51 +80,50 @@
 /* Mobile View Adjustments */
 @media (max-width: 768px) {
   .appointment-page {
-      background-color: #000000; /* Ensure black background on mobile */
+    background-color: #000000; /* Ensure black background on mobile */
   }
 
   .calendar-section {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 50px;
-      display: flex;
-      justify-content: center;
+    margin: 0 auto; /* Remove left and right margins */
+    margin-top: 50px;
+    display: flex;
+    justify-content: center; /* Center calendar horizontally */
   }
 
   .time-slot-section,
   .form-section {
-      margin: 1rem 0;
-      text-align: center;
+    margin: 1rem 0;
+    text-align: center;
   }
 
   .time-slots {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
   .appointment-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .appointment-form input,
   .appointment-form textarea {
-      width: 90%;
-      max-width: 100%;
-      margin: 1rem auto;
+    width: 90%;
+    max-width: 100%;
+    margin: 1rem auto;
   }
 
   .submit-button {
-      width: 80%;
-      padding: 0.8rem 1.5rem;
-      margin: 1rem auto;
+    width: 80%;
+    padding: 0.8rem 1.5rem;
+    margin: 1rem auto;
   }
 
   .title {
-      font-size: 36px;
-      margin-top: 120px;
+    font-size: 36px;
+    margin-top: 120px;
   }
 }
