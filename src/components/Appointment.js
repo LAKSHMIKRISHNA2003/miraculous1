@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Calendar from "react-calendar"; // Install with `npm install react-calendar`
-import "react-calendar/dist/Calendar.css"; // Calendar styles
-import "./Appointment.css"; // Custom CSS
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import "./Appointment.css";
 
 const AppointmentPage = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -20,22 +20,39 @@ const AppointmentPage = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert(
-      `Appointment booked!\nDate: ${selectedDate}\nTime: ${selectedTime}\nName: ${formData.name}\nEmail: ${formData.email}`
-    );
+    const appointment = {
+      date: selectedDate.toISOString().split("T")[0],
+      time: selectedTime,
+      ...formData,
+    };
+
+    try {
+      const response = await fetch("http://localhost:5000/appointments", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(appointment),
+      });
+      if (response.ok) {
+        alert("Appointment booked successfully!");
+        setSelectedDate(null);
+        setSelectedTime("");
+        setFormData({ name: "", email: "", contact: "", comments: "" });
+      } else {
+        alert("Failed to book appointment. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error booking appointment:", error);
+      alert("An error occurred. Please try again.");
+    }
   };
 
   return (
     <div className="appointment-page">
       <h2 className="title">Book an Appointment</h2>
       <div className="calendar-section">
-        <Calendar
-          onChange={setSelectedDate}
-          value={selectedDate}
-          className="calendar"
-        />
+        <Calendar onChange={setSelectedDate} value={selectedDate} className="calendar" />
       </div>
 
       {selectedDate && (
@@ -45,9 +62,7 @@ const AppointmentPage = () => {
             {timeSlots.map((slot, index) => (
               <button
                 key={index}
-                className={`time-slot ${
-                  selectedTime === slot ? "selected" : ""
-                }`}
+                className={`time-slot ${selectedTime === slot ? "selected" : ""}`}
                 onClick={() => setSelectedTime(slot)}
               >
                 {slot}
