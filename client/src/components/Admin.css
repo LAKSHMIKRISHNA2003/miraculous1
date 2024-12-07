@@ -46,4 +46,23 @@
   .appointment-item p {
     margin: 0.5rem 0;
   }
+  .admin-dashboard {
+    padding: 20px;
+  }
+  
+  .calendar-section,
+  .appointments-section {
+    margin-bottom: 20px;
+  }
+  
+  .appointments-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .appointment-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
   

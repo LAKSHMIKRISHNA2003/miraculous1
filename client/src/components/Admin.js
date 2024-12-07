@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "./Admin.css";
@@ -6,8 +7,16 @@ import "./Admin.css";
 const AdminDashboard = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [filteredAppointments, setFilteredAppointments] = useState([]);
+  const navigate = useNavigate();
 
-  // Format the date to match the backend API format
+  // Check authentication
+  useEffect(() => {
+    const isAuthenticated = localStorage.getItem("isAuthenticated");
+    if (!isAuthenticated) {
+      navigate("/"); // Redirect to login if not authenticated
+    }
+  }, [navigate]);
+
   const formatDate = (date) => {
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -15,7 +24,6 @@ const AdminDashboard = () => {
     return `${year}-${month}-${day}`;
   };
 
-  // Fetch appointments for the selected date
   const fetchAppointments = async (date) => {
     const formattedDate = formatDate(date);
     try {
@@ -29,7 +37,6 @@ const AdminDashboard = () => {
     }
   };
 
-  // Handle date change
   const handleDateChange = (date) => {
     setSelectedDate(date);
     fetchAppointments(date);

@@ -127,3 +127,40 @@
     margin-top: 120px;
   }
 }
+.thank-you-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.thank-you-section h3 {
+  font-size: 24px;
+  color: #4caf50;
+}
+
+.thank-you-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.thank-you-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-button,
+.another-appointment-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover,
+.another-appointment-button:hover {
+  background-color: #0056b3;
+}
